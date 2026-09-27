@@ -1,0 +1,448 @@
+@font-face {
+  font-family: 'Abhaya Libre Medium';
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/abhaya-libre-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Abhaya Libre Medium';
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/abhaya-libre-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Abhaya Libre Medium';
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/abhaya-libre-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Abhaya Libre Medium';
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/abhaya-libre-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Abhaya Libre Medium';
+  font-weight: 800;
+  font-display: swap;
+  src: url('assets/fonts/abhaya-libre-800.woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Afina el trazo de las fuentes en Mac/iOS, más parecido a como se ve en Figma */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.inicio {
+  width: 100%;
+  height: 100vh; /* fallback para navegadores sin soporte de dvh */
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+.inicio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inicio__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Arrancan ocultos y un poco más abajo; JS les agrega --visible al terminar la apertura */
+.inicio__logo {
+  width: auto;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.inicio__logo--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inicio__logo--firma {
+  height: 130px;
+}
+
+.inicio__logo--fecha {
+  height: 11px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inicio__logo {
+    transform: none;
+  }
+}
+
+.presentacion {
+  width: 100%;
+  padding: 40px 0 35px;
+  background-color: #AFC1CD;
+  color: #fff;
+  text-align: center;
+}
+
+.presentacion__titulo {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 800;
+  font-size: 13.27px;
+}
+
+.presentacion__texto {
+  margin: 27px 44px 0;
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.68px;
+}
+
+.presentacion__texto--primero {
+  margin-top: 20px;
+}
+
+.separador {
+  height: 1px;
+  background-color: #fff;
+}
+
+.presentacion__separador {
+  margin: 29px 60px 0;
+}
+
+.presentacion__firma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.presentacion__firma p:first-child {
+  margin-right: 5px;
+}
+
+.presentacion__firma p:last-child {
+  margin-left: 2px;
+}
+
+.presentacion__firma img {
+  height: 33px;
+  width: auto;
+}
+
+.fecha {
+  position: relative;
+  width: 100%;
+  height: 357px;
+  overflow: hidden;
+}
+
+.fecha__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fecha__degradado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 132px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.12));
+}
+
+.fecha__texto {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.lugar {
+  padding: 65px 0 54px;
+  background-color: #F9F8F4;
+  color: #A7BAC7;
+  text-align: center;
+}
+
+.lugar__nombre {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 500;
+  font-size: 13.69px;
+}
+
+.lugar__direccion {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 400;
+  font-size: 13.69px;
+}
+
+.lugar__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 37px;
+  margin-top: 15px;
+  border-radius: 6px;
+  background-color: #A7BAC7;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.union__superior {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 0 45px;
+  background-color: #A7BAC7;
+  color: #fff;
+}
+
+.union__separador {
+  width: 66px;
+}
+
+.union__dress-code {
+  margin-top: 19px;
+  text-align: center;
+}
+
+.union__inferior {
+  padding: 53px 28px 42px;
+  background-color: #E8E5DB;
+  color: #819CAD;
+  text-align: center;
+}
+
+.union__fecha-limite,
+.union__aclaracion {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 400;
+  font-size: 13.69px;
+}
+
+.union__aclaracion {
+  margin-top: 49px;
+}
+
+/* Centrado sobre el borde inferior del primer div, sin importar su altura */
+.union__logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 46.81px;
+  height: 46.81px;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+.manos__img {
+  width: 100%;
+  height: 102px;
+  object-fit: cover;
+}
+
+.regalos {
+  padding: 48px 28px;
+  background-color: #5C696F;
+  color: #fff;
+  text-align: center;
+}
+
+.regalos__texto,
+.regalos__datos {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 400;
+  font-size: 13.69px;
+}
+
+.regalos__texto {
+  margin-bottom: 17px;
+}
+
+.regalos__datos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.regalos__destacado,
+.regalos__etiqueta {
+  font-weight: 700;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  background-image: url("assets/img/contador-img-1x.png");
+  background-image: image-set(
+    url("assets/img/contador-img-1x.png") 1x,
+    url("assets/img/contador-img-2x.png") 2x,
+    url("assets/img/contador-img-3x.png") 3x
+  );
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.contador__reloj {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.contador__unidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px
+}
+
+.contador__numero {
+  display: flex;
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 800;
+  font-size: 36.36px;
+  font-variant-numeric: tabular-nums;
+}
+
+.contador__separador {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 400;
+  font-size: 36.36px;
+}
+
+.contador__etiqueta {
+  height: 7px;
+  width: auto;
+}
+
+.contador__digito {
+  position: relative;
+  overflow: hidden;
+}
+
+.contador__valor {
+  display: block;
+}
+
+.contador__valor--sale {
+  position: absolute;
+  inset: 0;
+  animation: contador-sale 500ms ease-in-out forwards;
+}
+
+.contador__valor--entra {
+  animation: contador-entra 500ms ease-in-out;
+}
+
+@keyframes contador-sale {
+  from {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  to {
+    transform: translateY(100%);
+    filter: blur(4px);
+  }
+}
+
+@keyframes contador-entra {
+  from {
+    transform: translateY(-100%);
+    filter: blur(4px);
+  }
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Apertura: la imagen se parte al medio y cada mitad sale hacia su lado */
+.scroll-bloqueado,
+.scroll-bloqueado body {
+  overflow: hidden;
+}
+
+.apertura {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  touch-action: none;
+}
+
+.apertura__mitad {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease-in-out;
+}
+
+.apertura__mitad--izq {
+  clip-path: inset(0 50% 0 0);
+}
+
+.apertura__mitad--der {
+  clip-path: inset(0 0 0 50%);
+}
+
+/* Cada mitad ocupa medio ancho, así que con un 50% ya sale de la pantalla */
+.apertura--abierta .apertura__mitad--izq {
+  transform: translateX(-50%);
+}
+
+.apertura--abierta .apertura__mitad--der {
+  transform: translateX(50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apertura__mitad {
+    transition: opacity 0.4s ease;
+  }
+
+  .apertura--abierta .apertura__mitad--izq,
+  .apertura--abierta .apertura__mitad--der {
+    transform: none;
+    opacity: 0;
+  }
+}
