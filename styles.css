@@ -43,6 +43,8 @@
 
 /* Afina el trazo de las fuentes en Mac/iOS, más parecido a como se ve en Figma */
 body {
+  max-width: 450px;
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -410,6 +412,8 @@ img {
 .apertura {
   position: fixed;
   inset: 0;
+  max-width: 450px;
+  margin: 0 auto;
   z-index: 100;
   touch-action: none;
 }
