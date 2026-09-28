@@ -115,7 +115,7 @@ img {
 .presentacion__titulo {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 800;
-  font-size: 13.77px;
+  font-size: 14.27px;
 }
 
 .presentacion__texto {
@@ -123,7 +123,7 @@ img {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 14.18px;
+  font-size: 14.68px;
 }
 
 .presentacion__texto--primero {
@@ -155,7 +155,7 @@ img {
 }
 
 .presentacion__firma__nombre {
-  font-size: 7.77px;
+  font-size: 8.27px;
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
 }
@@ -210,13 +210,13 @@ img {
 .lugar__nombre {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 500;
-  font-size: 14.19px;
+  font-size: 14.69px;
 }
 
 .lugar__direccion {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
-  font-size: 14.19px;
+  font-size: 14.69px;
 }
 
 .lugar__boton {
@@ -232,7 +232,7 @@ img {
   text-decoration: none;
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .union__superior {
@@ -257,7 +257,7 @@ img {
 .union__titulo {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 700;
-  font-size: 14.19px;
+  font-size: 14.69px;
 }
 
 .union__inferior {
@@ -271,7 +271,7 @@ img {
 .union__aclaracion {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
-  font-size: 14.19px;
+  font-size: 14.69px;
 }
 
 .union__aclaracion {
@@ -306,7 +306,7 @@ img {
 .regalos__datos {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
-  font-size: 14.19px;
+  font-size: 14.69px;
 }
 
 .regalos__texto {
@@ -357,14 +357,14 @@ img {
   display: flex;
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 800;
-  font-size: 36.86px;
+  font-size: 37.36px;
   font-variant-numeric: tabular-nums;
 }
 
 .contador__separador {
   font-family: 'Abhaya Libre Medium', serif;
   font-weight: 400;
-  font-size: 36.86px;
+  font-size: 37.36px;
 }
 
 .contador__etiqueta {
