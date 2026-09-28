@@ -41,10 +41,17 @@
   padding: 0;
 }
 
+/* En tablet y escritorio, color a los costados de la columna */
+html {
+  background-color: #E8E5DB;
+}
+
 /* Afina el trazo de las fuentes en Mac/iOS, más parecido a como se ve en Figma */
 body {
   max-width: 450px;
   margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -424,6 +431,7 @@ img {
   inset: 0;
   max-width: 450px;
   margin: 0 auto;
+  overflow: hidden; /* en pantallas anchas, las mitades no salen de la columna */
   z-index: 100;
   touch-action: none;
 }
