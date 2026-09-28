@@ -254,6 +254,12 @@ img {
   text-align: center;
 }
 
+.union__titulo {
+  font-family: 'Abhaya Libre Medium', serif;
+  font-weight: 700;
+  font-size: 14.19px;
+}
+
 .union__inferior {
   padding: 53px 28px 42px;
   background-color: #E8E5DB;
